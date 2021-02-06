@@ -1,10 +1,10 @@
 {
     "scripts": {
         "clean": "rm -rf build && mkdir build",
-        "build-server": "babel -d ./build ./app -s",
+        "build-server": "babel -d ./build ./server -s",
         "build": "npm run clean && npm run build-server",
-        "dev": "nodemon ./app --exec babel-node",
-        "start": "node app",
+        "dev": "nodemon ./server --exec babel-node",
+        "start": "node server",
         "build:css": "postcss ./styles/tailwind.css -o static/dist/tailwind.css",
         "run:tailwind": "npx tailwind build tailwind-style.css -o styles/tailwind.css"
     },
