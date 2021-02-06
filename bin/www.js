@@ -5,7 +5,7 @@
  */
 //
 
-const app = require('../app')
+const app = require('../server')
 const debug = require('debug')('Socky:server')
 const http = require('http')
 const log = require('../helpers/utils').log
