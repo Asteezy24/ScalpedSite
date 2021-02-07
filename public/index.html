@@ -35,11 +35,11 @@
         <div
                 class="w-full lg:w-4/5 flex flex-col lg:flex-row mt-16 justify-center lg:justify-start lg:ml-40"
         >
-            <input
+            <input id="email"
                     class="lg:w-2/4 border-b border-blue-500 border-solid text-xl outline-none m-4"
                     placeholder="Enter your Email."
             />
-            <button
+            <button id="myButton"
                     class="bg-blue-500 text-xl px-10 p-2 m-4 rounded-lg text-white font-body"
             >
                 Subscribe
@@ -337,13 +337,13 @@
 </div>
 </body>
 <script>
-    var accordion = document.getElementsByClassName("accordion");
+    let accordion = document.getElementsByClassName("accordion");
 
-    for (i = 0; i < accordion.length; i++) {
-        var icon = accordion[i].children[0].children[i];
+    for (let i = 0; i < accordion.length; i++) {
+        let icon = accordion[i].children[0].children[i];
 
         accordion[i].addEventListener("click", function () {
-            var panel = this.nextElementSibling;
+            let panel = this.nextElementSibling;
             if (panel.style.display === "block") {
                 panel.style.display = "none";
             } else {
@@ -352,4 +352,5 @@
         });
     }
 </script>
+<script src="./client.js"></script>
 </html>
