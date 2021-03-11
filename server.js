@@ -25,7 +25,7 @@ mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true 
 mongoose.Promise = global.Promise
 
 
-const port = 80;
+const port = 443;
 https.createServer({
     key: fs.readFileSync('./key.pem'),
     cert: fs.readFileSync('./cert.pem'),
