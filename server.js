@@ -25,14 +25,17 @@ mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true 
 mongoose.Promise = global.Promise
 
 
-const port = 443;
-https.createServer({
-    key: fs.readFileSync('./key.pem'),
-    cert: fs.readFileSync('./cert.pem'),
-    passphrase: 'alexiscool'
-}, server).listen(port, () => {
-    console.log('Listening on port ' + port)
-});
+const port = 80;
+server.listen(port, function() {
+    console.log('server listening on port ' + port)
+})
+// https.createServer({
+//     key: fs.readFileSync('./key.pem'),
+//     cert: fs.readFileSync('./cert.pem'),
+//     passphrase: 'alexiscool'
+// }, server).listen(port, () => {
+//     console.log('Listening on port ' + port)
+// });
 
 server.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
