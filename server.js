@@ -46,6 +46,12 @@ server.post('/subscribe', (req, res) => {
         email: req.body.email
     })
 
+    Email.findOne({email: req.body.email}).then(async (email) => {
+        if(email !== null) {
+            console.log('Email exists already!')
+        }
+    })
+
     email.save((err, result) => {
         if (err) {
             return console.log(err);

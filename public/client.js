@@ -11,6 +11,8 @@ button.addEventListener('click', async function(e) {
             if(response.ok) {
                 alert('Subscribed! Stay tuned.')
                 return;
+            } else {
+                alert('Email exists already. Thank you for your interest.')
             }
             throw new Error('Request failed.');
         })
